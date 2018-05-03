@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>Royorange.Plugin.AndroidMVP.AndroidMvpPlugin</id>
+    <name>Android MVP-generator</name>
+    <vendor email="royorange@sina.com" url="https://github.com/royorange/android-mvp-plugin">Royorange</vendor>
+
+    <description><![CDATA[
+    Generate presenter,module and contract class for android mvp struct. It's based on dagger and google sample.<br>
+
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="RoyorangePlugin.MVPGenerator" class="com.royorange.plugin.action.MVPGenerator" text="MVPGenerator"
+                description="Generate MVP Class">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta P"/>
+        </action>
+        <action id="Generate-MVP-Activity" class="com.royorange.plugin.action.MVPActivityGenerate" text="MVP Activity"
+                description="Generate MVP Activity">
+            <add-to-group group-id="NewJavaSpecialFile" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
